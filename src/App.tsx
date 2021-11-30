@@ -1,14 +1,20 @@
 import React from "react";
 import styles from "./App.module.css";
-import { AppHeader, AppFooter, Carousel, SideMenu, ProductionCollection } from "./components";
+import {
+  AppHeader,
+  AppFooter,
+  Carousel,
+  SideMenu,
+  ProductionCollection,
+  Partners,
+} from "./components";
 import { Row, Col, Typography } from "antd";
-import {productList1, productList2, productList3} from './mockup'
-import sideImage1 from './assets/images/sider_2019_12-09.png'
-import sideImage2 from './assets/images/sider_2019_02-04.png'
-import sideImage3 from './assets/images/sider_2019_02-04-2.png'
+import { productList1, productList2, productList3 } from "./mockup";
+import sideImage1 from "./assets/images/sider_2019_12-09.png";
+import sideImage2 from "./assets/images/sider_2019_02-04.png";
+import sideImage3 from "./assets/images/sider_2019_02-04-2.png";
 
-
-const {Title} = Typography
+const { Title } = Typography;
 
 function App() {
   return (
@@ -25,20 +31,33 @@ function App() {
           </Col>
         </Row>
         <ProductionCollection
-          title={<Title level={3} type='warning'>爆款推荐</Title>}
+          title={
+            <Title level={3} type="warning">
+              爆款推荐
+            </Title>
+          }
           sideImage={sideImage1}
           products={productList1}
         ></ProductionCollection>
         <ProductionCollection
-          title={<Title level={3} type='danger'>新品上市</Title>}
+          title={
+            <Title level={3} type="danger">
+              新品上市
+            </Title>
+          }
           sideImage={sideImage2}
           products={productList2}
         ></ProductionCollection>
         <ProductionCollection
-          title={<Title level={3} type='success'>国内游推荐</Title>}
+          title={
+            <Title level={3} type="success">
+              国内游推荐
+            </Title>
+          }
           sideImage={sideImage3}
           products={productList3}
         ></ProductionCollection>
+        <Partners />
       </div>
       <AppFooter />
     </div>
