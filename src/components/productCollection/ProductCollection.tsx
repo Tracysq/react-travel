@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ProductCollection.module.css";
-import { Row, Col, Typography, Divider } from "antd";
+import { Row, Col, Divider } from "antd";
 import { ProductImage } from "./ProductImage";
 
 interface Props {
@@ -19,7 +19,7 @@ export const ProductionCollection: React.FC<Props> = ({
       <Divider orientation="left">{title}</Divider>
       <Row>
         <Col span={4}>
-          <img src={sideImage} className={styles["side-image"]} />
+          <img src={sideImage} className={styles["side-image"]} alt="" />
         </Col>
         <Col span={20}>
           <Row>
@@ -37,7 +37,7 @@ export const ProductionCollection: React.FC<Props> = ({
                 <Col span={12}>
                   <ProductImage
                     id={products[1].price}
-                    size="samll"
+                    size="small"
                     title={products[1].title}
                     imageSrc={products[1].touristRoutePictures[0].url}
                     price={products[1].price}
