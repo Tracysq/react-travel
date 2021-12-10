@@ -1,3 +1,5 @@
+import {CHANGE_LANGUAGE, changeLanguageAction} from './languageActions'
+
 interface languageState {
   language: 'en' | 'zh'
   languageList: { name: string, code: string }[]
@@ -11,16 +13,12 @@ const defaultState: languageState = {
   ]
 }
 
-interface ActionType {
-  type: string,
-  payload: any
-}
-
-export default (state = defaultState, action: any) => {
+export default (state = defaultState, action: changeLanguageAction) => {
   console.log(state)
   console.log(action)
+
   switch (action.type) {
-    case 'change_language':
+    case CHANGE_LANGUAGE:
       return {
         ...state,
         language: action.payload
